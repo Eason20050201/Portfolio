@@ -963,10 +963,36 @@ form textarea {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 40px; /* 增加 About Me 與 Technical Skills 間距 */
     }
 
     .about-img {
         order: -1; /* 確保圖片在上 */
+    }
+
+    /* 調整區塊間距 */
+    .Technical-bars {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 40px; /* 增加 Technical Skills 與 Professional Skills 間距 */
+    }
+
+    .Professional-skills {
+        margin-bottom: 20px; /* 減少與 Latest Project 間距，使其更接近 */
+    }
+
+    .Latest-project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Latest-project img {
+        max-width: 100%;
+        width: 90%; /* 增大圖片大小，確保內容清晰呈現 */
+        height: auto;
+        margin-bottom: 10px;
     }
 
     /* 修改手機版的 contact 讓文字在上，表單在下，並置中 */
@@ -982,10 +1008,6 @@ form textarea {
     }
 
     /* 確保 Technical Skills 保持原始格式，並修正水平條錯位 */
-    .Technical-bars {
-        text-align: left; /* 保持文字原本的對齊方式 */
-        width: 100%;
-    }
     .Technical-bars .bar {
         display: flex;
         flex-direction: column;
