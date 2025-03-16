@@ -922,6 +922,10 @@ form textarea {
         padding: 15px 0; /* 增加間距 */
     }
 
+    .navbar.active {
+        display: flex; /* 被點擊時才顯示 */
+    }
+
     .navbar a {
         display: block;
         padding: 10px 0; /* 讓選單項目之間有間隔 */
@@ -933,38 +937,35 @@ form textarea {
     .navbar a:last-child {
         border-bottom: none; /* 移除最後一個選單項目的邊框 */
     }
+    
+    /* 修正手機版的 home 內容完全置中 */
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;  /* 確保內容不會偏移 */
+        max-width: 600px;
+        margin: 0 auto; /* 讓內容完全置中 */
+        padding: 20px;
+    }
 
-    .navbar.active {
-        display: flex; /* 被點擊時才顯示 */
+    .home-img {
+        order: -1; /* 確保圖片在上 */
+        max-width: 150px; /* 限制圖片大小 */
+        margin-bottom: 10px;
     }
-    
-    /* 強制手機版所有內容有統一的邊界，並讓文字置中（Technical Skills 除外） */
-    .content-container, .home, .about, .portfolio-content, .contact, .container1 {
-        padding: 10px 20px; /* 設置手機版統一的內邊距 */
-        margin: 0 auto;
-        width: 90%; /* 讓內容不會貼齊螢幕邊緣 */
-        text-align: center; /* 讓文字置中 */
-    }
-    
-    /* 修改手機版的 about 讓圖片在上，文字在下 */
+
+    /* 修正手機版的 about 內容完全置中 */
     .about {
         display: flex;
-        flex-direction: column; /* 讓內容垂直排列 */
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    .about-img {
-        order: -1; /* 確保圖片在上 */
-    }
 
-    /* 修改手機版的 home 讓圖片在上，文字在下，與 about 保持一致 */
-    .home {
-        display: flex;
-        flex-direction: column; /* 讓內容垂直排列 */
-        align-items: center;
-        text-align: justify;
-    }
-    .home-img {
+    .about-img {
         order: -1; /* 確保圖片在上 */
     }
 
