@@ -6,6 +6,31 @@ var typed= new Typed(".text", {
     loop:true
 });
 
+
+function toggleMenu() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("active");
+}
+
+// 📌 點擊選單內的連結時，自動關閉漢堡選單（只在手機版有效）
+document.querySelectorAll(".navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.innerWidth <= 768) { // 只有手機版時執行
+            navbar.classList.remove("active");
+        }
+    });
+});
+
+// 📌 確保 menu-toggle 存在並監聽點擊事件
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    if (menuToggle) {
+        menuToggle.addEventListener("click", toggleMenu);
+    }
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".btn-box").addEventListener("click", function (e) {
         e.preventDefault(); // 防止預設跳轉

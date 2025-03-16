@@ -866,3 +866,131 @@ form textarea {
     animation: bounceFadeIn 0.8s ease-out;
     opacity: 1;  /* 確保動畫結束後仍保持可見 */
 }
+
+
+/* 響應式設計 (RWD) 修改 - 讓 header 在手機版固定顯示，並調整 navbar 展示效果 */
+
+/* 預設隱藏 menu-toggle（桌面版不顯示） */
+.menu-toggle {
+    display: none;
+}
+
+/* 桌面版（大於 768px）時，確保 navbar 顯示 */
+@media screen and (min-width: 769px) {
+    .navbar {
+        display: flex;  /* 桌面版顯示 */
+        justify-content: space-between;
+    }
+}
+
+/* 手機版（小於 768px）時，啟用漢堡選單，並讓 header 固定 */
+@media screen and (max-width: 768px) {
+    .header {
+        position: fixed; /* 固定在螢幕頂部 */
+        width: 100%;
+        background: #051129;
+        padding: 10px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        top: 0; /* 確保 header 一直顯示，不會被隱藏 */
+        transition: none; /* 移除滾動時隱藏的效果 */
+    }
+
+    .menu-toggle {
+        display: block; /* 讓漢堡選單出現 */
+        font-size: 30px;
+        cursor: pointer;
+        color: #fff;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 101;
+    }
+
+    .navbar {
+        display: none; /* 預設隱藏 */
+        flex-direction: column;
+        align-items: center; /* 讓選單項目置中對齊 */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(5, 17, 41, 0.9);
+        text-align: center;
+        padding: 15px 0; /* 增加間距 */
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px 0; /* 讓選單項目之間有間隔 */
+        width: 80%; /* 讓選單更整齊 */
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 增加下方間隔線 */
+    }
+
+    .navbar a:last-child {
+        border-bottom: none; /* 移除最後一個選單項目的邊框 */
+    }
+
+    .navbar.active {
+        display: flex; /* 被點擊時才顯示 */
+    }
+    
+    /* 強制手機版所有內容有統一的邊界，並讓文字置中（Technical Skills 除外） */
+    .content-container, .home, .about, .portfolio-content, .contact, .container1 {
+        padding: 10px 20px; /* 設置手機版統一的內邊距 */
+        margin: 0 auto;
+        width: 90%; /* 讓內容不會貼齊螢幕邊緣 */
+        text-align: center; /* 讓文字置中 */
+    }
+    
+    /* 修改手機版的 about 讓圖片在上，文字在下 */
+    .about {
+        display: flex;
+        flex-direction: column; /* 讓內容垂直排列 */
+        align-items: center;
+        text-align: center;
+    }
+    .about-img {
+        order: -1; /* 確保圖片在上 */
+    }
+
+    /* 修改手機版的 home 讓圖片在上，文字在下，與 about 保持一致 */
+    .home {
+        display: flex;
+        flex-direction: column; /* 讓內容垂直排列 */
+        align-items: center;
+        text-align: justify;
+    }
+    .home-img {
+        order: -1; /* 確保圖片在上 */
+    }
+
+    /* 修改手機版的 contact 讓文字在上，表單在下，並置中 */
+    .contact {
+        display: flex;
+        flex-direction: column; /* 讓內容垂直排列 */
+        align-items: center;
+        text-align: center;
+    }
+    .contact-text {
+        order: -1; /* 讓文字先顯示 */
+        text-align: center; /* 讓文字置中 */
+    }
+
+    /* 確保 Technical Skills 保持原始格式，並修正水平條錯位 */
+    .Technical-bars {
+        text-align: left; /* 保持文字原本的對齊方式 */
+        width: 100%;
+    }
+    .Technical-bars .bar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Technical-bars .progress-line {
+        width: 100%; /* 確保進度條佔滿可用空間 */
+    }
+}
