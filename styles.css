@@ -24,15 +24,18 @@ body {
 }
 
 .logo {
+    display: inline-block;
     position: relative;
     font-size: 25px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    cursor: default;
+    transition: .3s;
     opacity: 0;
+    cursor: default;
     animation: slideRight 1s ease forwards;
 }
+
 
 .navbar a {
     display: inline-block;

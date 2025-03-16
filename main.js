@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".btn-box").forEach(function (button) {
+    document.querySelectorAll(".btn-box, .logo").forEach(function (button) {
         button.addEventListener("click", function (e) {
             e.preventDefault(); // 防止預設行為
             const targetId = this.getAttribute("href"); // 取得 href，例如 "#about"
