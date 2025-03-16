@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="home" class="logo">Portfolio.</a>
+
+        <nav class="navbar">
+            <a href="#home" style="--i:1"class="active" >Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skills</a>
+            <a href="#project" style="--i:4">Project</a>
+            <a href="#contact" style="--i:5">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="resources/eason.png">
+        </div>
+        <div class="home-content">
+            <h3>哈囉, 我是</h3>
+            <h1>王翊鑫!</h1>
+            <h3>我現在是 <span class="text"></span></h3>
+            <p>我正在學習軟體開發，與程式設計。<br>
+                熱愛學習新技術，致力於成為優秀的軟體工程師。
+            </p>
+            <div class="home-sci">
+                <a href="https://www.facebook.com/eason.wang.0201/" style="--i:6" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="https://www.instagram.com/eason.wang.0201/" style="--i:7" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="https://tw.linkedin.com/in/easonwang0201" style="--i:8" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/Eason20050201" style="--i:9" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
+            <div>
+            <a href="#about" class="btn-box">More About Me</a>
+            </div>
+        </div>
+        <span class="home-imageHover"></span>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="resources/eason.png">
+        </div>
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <h4>Computer Science Student</h4>
+            <p>
+                嗨！我是 王翊鑫，就讀台灣師範大學資工系，目前專注於軟體開發與程式設計。
+                曾在 CPE 競賽中取得前 13% 的成績，也持續在 CPE 競賽與 LeetCode 
+                上精進演法能力。此外，對於前端技術也有興趣，時常會看一些前端設計的程式碼，
+                像是這個作品集網站就是參考網路上的影片，再自己修改一些地方所製成的。
+                我充滿好奇心，也樂於學習新技術，目前也持續接觸不同領域的東西，
+                我希望未來能成為一名優秀的軟體工程師，透過技術解決真實世界的問題。
+            </p>
+
+            <a href="resources/Eason_Resume.pdf" class="btn-box" target="_blank">View My Resume</a>        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container1">
+            <h1 class="heading1">Technical Skills</h1>
+            <div class="Technical-bars">
+                <div class="bar"><img src="resources/c-icon.png" alt="C Logo" class="custom-icon">
+                    <div class="info">
+                        <span>C</span>
+                    </div>
+                    <div class="progress-line c">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><img src="resources/cpp-icon.png" alt="CPP Logo" class="custom-icon">
+                    <div class="info">
+                        <span>C++</span>
+                    </div>
+                    <div class="progress-line cpp">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color: #c95d2e" class="bx bxl-html5"></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color: #147bbc" class="bx bxl-css3"></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="container1">
+            <h1 class="heading1">Professional Skills</h1>
+            <div class="radial-bars">
+
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">80%</div>
+                    <div class="text">Creativity</div>
+                </div>
+
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">Conmmunication</div>
+                </div>
+
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">TeamWork</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="portfolio" id="project">
+            <div class="main-text" id="project">
+                <h2>Latest<span>Project</span></h2>
+
+                <div class="portfolio-content">
+                    <div class="row">
+                        <img src="resources/Interactive-Fiction-Engine-demo-1-封面圖.png">
+                        <div class="layer">
+                            <h5>Interactive Fiction Engine Game</h5>
+                            <p>
+                                專案目標為使用 C 語言與圖形化界面開發技術，設計並實作出一套互動式劇情遊戲引擎（Interactive Fiction Engine），同時培養團隊協作、專案管理與問題解決的能力。
+                            </p> 
+                            <div class="repo-icons">
+                            <a href="https://github.com/Eason20050201/Interactive-Fiction-Engine" target="_blank">
+                                <i class='bx bxl-github'></i>
+                            </a>    
+                            </div>                    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="resources/meow-agent-demo-封面圖.png">
+                        <div class="layer">
+                            <h5>Meow Agent</h5>
+                            <p>
+                                利用 processing java 所撰寫出的遊戲。 這是一款結合射擊與學科教育的趣味小遊戲！玩家將扮演貓咪特工，一邊與敵人戰鬥，一邊完成隨機生成的學科題目。答對題目即可獲得技能強化，讓角色變得更強！
+                            </p> 
+                            <div class="repo-icons">
+                            <a href="https://github.com/Eason20050201/Meow-Agent" target="_blank">
+                                <i class='bx bxl-github'></i>
+                            </a>      
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <h4>尋找實習機會！💡</h4>
+            <p>
+                我目前就讀 國立台灣師範大學 資訊工程學系，對軟體開發充滿熱情，希望能在業界累積實戰經驗。
+                如果貴公司正在尋找 實習生，或有適合的機會，歡迎與我聯繫！📩</p>
+            <div class="contact-list">
+                <li><i class='bx bxs-send'></i> easonworking0201@gmail.com</li>
+            </div>
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/eason.wang.0201/" style="--i:1" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="https://www.instagram.com/eason.wang.0201/" style="--i:2" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="https://tw.linkedin.com/in/easonwang0201" style="--i:3" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/Eason20050201" style="--i:4" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
+        </div>
+    
+        <div class="contact-form">
+            <form id = "contactForm" action="https://formspree.io/f/xqapaagp" method="POST">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+                <input type="text" name="subject" placeholder="Enter Your Subject">
+                <textarea name="message" id="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <button type="submit" class="send">submit</button>
+            </form>
+            <!-- 成功訊息，預設隱藏 -->
+            <p id="successMessage">
+                感謝您的留言！我會盡快與您聯繫。
+            </p>
+        </div>
+    </section>
+    
+
+
+    <script src="main.js"></script>
+</body>
+</html>
