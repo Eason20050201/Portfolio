@@ -727,10 +727,11 @@ section {
     color: #0ef;
 }
 
+
 .contact-text h4 {
     margin: 15px 0;
     color: rgb(228, 228, 228);
-    font-size: 20px;
+    font-size: 29px;
     font-weight: 600;
 }
 
@@ -931,6 +932,7 @@ form textarea {
         padding: 10px 0; /* 讓選單項目之間有間隔 */
         width: 80%; /* 讓選單更整齊 */
         text-align: center;
+        margin: 0 auto;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 增加下方間隔線 */
     }
 
@@ -938,7 +940,6 @@ form textarea {
         border-bottom: none; /* 移除最後一個選單項目的邊框 */
     }
     
-    /* 修正手機版的 home 內容完全置中 */
     .home, 
     .about,
     .contact {
@@ -949,43 +950,43 @@ form textarea {
         text-align: center;
         width: 100%;  /* 確保內容不會偏移 */
         margin: 0 auto; /* 讓內容完全置中 */
-        padding: 20px;
+        padding: 10px;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
     }
 
     .home-img {
         order: -1; /* 確保圖片在上 */
     }
 
-    /* 修正手機版的 about 內容完全置中 */
-    
-    /* .about {
+    .about-img {
+        order: -1; /* 確保圖片在上 */
+    }
+
+    .about-text p {
+        font-size: clamp(16px, 4vw, 20px); /* 根據視窗大小縮放 */
+        line-height: 1.6; /* 增加行距，避免文字過於擁擠 */
+        text-align: justify;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .contact-text {
+        order: -1; /* 讓文字先顯示 */
+        text-align: center; /* 讓文字置中 */
+    }
+
+    .container1 {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 100%;  /* 確保內容不會偏移 */
-        /*
-        margin: 0 auto; /* 讓內容完全置中 */
-        /* padding: 20px;
-    }  */
-
-    .about-img {
-        order: -1; /* 確保圖片在上 */
-    }
-
-    /* 修改手機版的 contact 讓文字在上，表單在下，並置中 */
-    /*
-    .contact {
-        display: flex;
-        flex-direction: column;  讓內容垂直排列 
-        align-items: center;
-        text-align: center;
-    } 
-    */
-    .contact-text {
-        order: -1; /* 讓文字先顯示 */
-        text-align: center; /* 讓文字置中 */
+        width: 90%;  /* 確保內容不會偏移 */
+        margin: 30px 20px auto; /* 讓內容完全置中 */
+        padding: 20px;
     }
 
     /* 確保 Technical Skills 保持原始格式，並修正水平條錯位 */
@@ -1000,5 +1001,41 @@ form textarea {
     }
     .Technical-bars .progress-line {
         width: 100%; /* 確保進度條佔滿可用空間 */
+    }
+
+    .main-text,
+    .main-text h2{
+        margin: 0px;
+    }
+
+    .layer {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    .layer h5 {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .layer p {
+        color: #000;
+        font-size: 14px;
+        margin: 0px;
+        padding: 0px;
+    }    
+
+    .layer i {
+        opacity: 0;
+        width: 30px;
+        height: 30px;
+        margin: 0px;
+        padding: 0;
+        border-radius: 50%;
     }
 }

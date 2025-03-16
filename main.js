@@ -1,5 +1,5 @@
 var typed= new Typed(".text", {
-    strings:["資訊工程系的學生","持續挑戰自我的學生"],
+    strings:["資工系的學生","持續挑戰的學生"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -32,10 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".btn-box").addEventListener("click", function (e) {
-        e.preventDefault(); // 防止預設跳轉
-        document.querySelector("#about").scrollIntoView({
-            behavior: "smooth"
+    document.querySelectorAll(".btn-box").forEach(function (button) {
+        button.addEventListener("click", function (e) {
+            e.preventDefault(); // 防止預設行為
+            const targetId = this.getAttribute("href"); // 取得 href，例如 "#about"
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
         });
     });
 });
